@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <script src="index.js"></script>
+    <h1 id="homie"> 🔥🔥🔥🔥🔥 Drop your mixtape, homie. 🔥🔥🔥🔥🔥 </h1>
+    <div id="dragdiv">
+      <div id="dragdivheader">
+        <img src="cassette-tape-clear.png" id=cassette-tape>
+      </div>
+    </div>
+    <img src="player.png" id="boombox"> 
+    <h2 id="heat"> That was some HEAT woaahhahhahhhh </h2>
+
+    <script>
+    //Make the DIV element draggagle:
+    dragElement(document.getElementById("dragdiv"));
+
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        /* if present, the header is where you move the DIV from:*/
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        /* otherwise, move the DIV from anywhere inside the DIV:*/
+        elmnt.onmousedown = dragMouseDown;
+      }
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        //change background to fire whenever cassette is being dragged
+        document.body.style.background = "url('fire.jpg') repeat";
+         document.getElementById("homie").style.color = "white";
+         document.getElementById("heat").style.color = "white";
+      }
+
+      function closeDragElement() {
+        /* stop moving when mouse button is released:*/
+        document.onmouseup = null;
+        document.onmousemove = null;
+        document.body.style.background = "dimgrey";
+         document.getElementById("homie").style.color = "black";
+         document.getElementById("heat").style.color = "black";
+      }
+    }
+    </script>
+  </body>
+</html>
