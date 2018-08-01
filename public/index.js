@@ -32,8 +32,8 @@ function dragElement(elmnt) {
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
     //change background to fire whenever cassette is being dragged
     document.body.style.background = "url('fire.jpg') repeat";
-     document.getElementById("homie").style.color = "white";
-     document.getElementById("heat").style.color = "white";
+    document.getElementById("homie").style.color = "white";
+    document.getElementById("heat").style.color = "white";
   }
 
   function closeDragElement() {
@@ -41,8 +41,8 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
     document.body.style.background = "dimgrey";
-     document.getElementById("homie").style.color = "black";
-     document.getElementById("heat").style.color = "black";
+    document.getElementById("homie").style.color = "black";
+    document.getElementById("heat").style.color = "black";
   }
 }
 
