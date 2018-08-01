@@ -1,6 +1,3 @@
-//Make the DIV element draggagle:
-dragElement(document.getElementById("dragdiv"));
-
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elmnt.id + "header")) {
@@ -48,3 +45,6 @@ function dragElement(elmnt) {
      document.getElementById("heat").style.color = "black";
   }
 }
+
+//Make the DIV element draggagle:
+window.onload(dragElement(document.getElementById("dragdiv")));
