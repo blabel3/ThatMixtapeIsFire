@@ -47,4 +47,6 @@ function dragElement(elmnt) {
 }
 
 //Make the DIV element draggagle:
-window.onload(dragElement(document.getElementById("dragdiv")));
+window.onload = function(){
+  dragElement(document.getElementById("dragdiv")));
+}
