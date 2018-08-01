@@ -1,0 +1,54 @@
+html {
+  font-size: 20px;
+}
+
+body {
+  background-color:dimgrey;
+}
+
+h1 {
+  font-family: "arial";
+  text-align: center;
+}
+
+h2 {
+  font-family: "arial";
+  text-align: center;
+}
+
+#dragdiv {
+  position: absolute;
+  z-index: 9;
+  //background-color: #f1f1f1;
+  //border: 1px solid #d3d3d3;
+  text-align: center;
+  cursor: move;
+}
+
+#boombox {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+#cassette {
+  width:20%;
+}
+
+@media screen and (min-width: 800px){
+  #boombox  { width : 72%; }
+  #cassette { width : 18%; }
+}
+
+@media screen and (min-width: 1200px){
+  #boombox  { width : 60%; }
+  #cassette { width : 15%; }
+}
+
+@media screen and (min-width: 1600px){
+  #boombox  { width : 40%; }
+  #cassette { width : 10%; }
+}
