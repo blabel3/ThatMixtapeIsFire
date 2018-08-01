@@ -31,7 +31,7 @@ function dragElement(elmnt) {
     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
     //change background to fire whenever cassette is being dragged
-    document.body.style.background = "url('fire.jpg') repeat";
+    document.body.style.background = "url('assets/fire.jpg') repeat";
     document.getElementById("homie").style.color = "white";
     document.getElementById("heat").style.color = "white";
   }

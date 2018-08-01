@@ -34,21 +34,21 @@ h2 {
   padding-bottom: 2rem;
 }
 
-#cassette-tape {
+#cassette {
   width:20%;
 }
 
 @media screen and (min-width: 800px){
-  #boombox       { width : 72%; }
-  #cassette-tape { width : 18%; }
+  #boombox  { width : 72%; }
+  #cassette { width : 18%; }
 }
 
 @media screen and (min-width: 1200px){
-  #boombox       { width : 60%; }
-  #cassette-tape { width : 15%; }
+  #boombox  { width : 60%; }
+  #cassette { width : 15%; }
 }
 
 @media screen and (min-width: 1600px){
-  #boombox       { width : 40%; }
-  #cassette-tape { width : 10%; }
+  #boombox  { width : 40%; }
+  #cassette { width : 10%; }
 }
