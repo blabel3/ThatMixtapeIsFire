@@ -36,6 +36,14 @@ h2 {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     top: 62.9%;
+  -webkit-animation: glow 2s infinite ease-in-out;
+  animation: glow 3s infinite ease-in-out;
+}
+
+@keyframes glow {
+   0% { -webkit-filter: brightness(100%); filter: brightness(100%); }
+   50% { -webkit-filter: brightness(175%); filter: brightness(175%); }
+   100% { -webkit-filter: brightness(100%); filter: brightness(100%); }
 }
 
 #cassette {
