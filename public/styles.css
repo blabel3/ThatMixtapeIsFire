@@ -16,25 +16,30 @@ h2 {
   text-align: center;
 }
 
-#dragdiv {
-  position: absolute;
-  z-index: 9;
-  //background-color: #f1f1f1;
-  //border: 1px solid #d3d3d3;
-  text-align: center;
-  cursor: move;
-}
-
-#boombox {
+#drop {
+  position:relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+
+}
+
+#boombox {
+  width: 100%;
+}
+
+#target{
+  width: 25.381%;
+  position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 62.9%;
 }
 
 #cassette {
+  z-index: 9;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -42,16 +47,16 @@ h2 {
 }
 
 @media screen and (min-width: 800px){
-  #boombox  { width : 72%; }
+  #drop  { width : 72%; }
   #cassette { width : 18%; }
 }
 
 @media screen and (min-width: 1200px){
-  #boombox  { width : 60%; }
+  #drop  { width : 60%; }
   #cassette { width : 15%; }
 }
 
 @media screen and (min-width: 1600px){
-  #boombox  { width : 40%; }
+  #drop  { width : 40%; }
   #cassette { width : 10%; }
 }
