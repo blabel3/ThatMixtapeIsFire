@@ -30,11 +30,14 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-  padding-top: 4rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
 }
 
 #cassette {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width:20%;
 }
 
