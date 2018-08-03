@@ -22,7 +22,7 @@ $( function() {
       $( "#heat" ).show();
       $( "#cassette" ).addClass("party");
       $( "#boombox" ).addClass("party");
-      $( "#homie" ).text("That was some HEAT my guy!!");
+      $( "#homie" ).text("🔥🔥🔥🔥🔥🔥🔥🔥🔥");
       $( this ).remove();
       //$( "music" ).play();
       audioElement.play();
@@ -37,6 +37,6 @@ $(document).ready(function() {
     audioElement.setAttribute('src', 'https://my.mixtape.moe/gxmwfj.mp3');
 
     audioElement.addEventListener('ended', function() {
-        this.play();
+        this.currentTime = 2;
     }, false);
 });
