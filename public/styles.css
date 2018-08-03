@@ -73,20 +73,36 @@ h2 {
    100% { -webkit-filter: brightness(100%); filter: brightness(100%); }
 }
 
-.rainbow {
-  -webkit-animation: rainbow 1.5s infinite linear;
-  animation: rainbow 1.5s infinite linear;
+.flames {
+  background-image: url('assets/fire.jpg');
+  background-repeat: repeat;
+  -webkit-animation: shake 0.5s infinite;
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% { background-position: 1px 1px; }
+    10% { background-position: -1px, -2px; }
+    20% { background-position: -3px, 0px; }
+    30% { background-position: 3px, 2px;}
+    40% { background-position: 1px, -1px; }
+    50% { background-position: -1px, 2px; }
+    60% { background-position: -3px, 1px); }
+    70% { background-position: 3px, 1px; }
+    80% { background-position: -1px, -1px; }
+    90% { background-position: 1px, 2px; }
+    100% { background-position: 1px, 1px; }
+}
+
+.party {
+  -webkit-animation: bump 1s infinite ease-in-out, rainbow 1.5s infinite linear;
+  animation: bump 1s infinite ease-in-out, rainbow 1.5s infinite linear;
 }
 
 @keyframes rainbow {
   0% { -webkit-filter: hue-rotate(0deg); filter: hue-rotate(0deg); }
   50% { -webkit-filter: hue-rotate(180deg); filter: hue-rotate(180deg); }
   100% { -webkit-filter: hue-rotate(360deg); filter: hue-rotate(360deg); }
-}
-
-.bump {
-  -webkit-animation: bump 1s infinite ease-in-out;
-  animation: bump 1s infinite ease-in-out;
 }
 
 @keyframes bump {
@@ -105,9 +121,4 @@ h2 {
     -webkit-transform: scale(1, 1); /* Safari */
     transform: scale(1, 1);
   }
-}
-
-.party {
-  -webkit-animation: bump 1s infinite ease-in-out, rainbow 1.5s infinite linear;
-  animation: bump 1s infinite ease-in-out, rainbow 1.5s infinite linear;
 }

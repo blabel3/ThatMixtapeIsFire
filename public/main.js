@@ -16,12 +16,12 @@ $( function() {
   $( "#target" ).droppable({
     drop: function( event, ui ) {
       $( "#cassette" ).draggable( "option", "disabled", true );
-      $( document.body ).css("background", "url('assets/fire.jpg') repeat");
+      $( document.body ).addClass("flames");
       $( "#heat" ).show();
-      $( this ).remove();
       $( "#cassette" ).addClass("party");
       $( "#boombox" ).addClass("party");
       $( "#homie" ).text("That was some HEAT my guy!!");
+      $( this ).remove();
     }
   });
 
