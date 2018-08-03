@@ -15,6 +15,7 @@ h2 {
   font-family: "arial";
   text-align: center;
   color: "white";
+  font-size: 10px;
 }
 
 #drop {
@@ -50,16 +51,19 @@ h2 {
 @media screen and (min-width: 800px){
   #drop  { width : 72%; }
   #cassette { width : 18%; }
+  h2 { font-size: 13px; }
 }
 
 @media screen and (min-width: 1200px){
   #drop  { width : 60%; }
   #cassette { width : 15%; }
+  h2 { font-size: 16px }
 }
 
 @media screen and (min-width: 1600px){
   #drop  { width : 40%; }
   #cassette { width : 10%; }
+  h2 { font-size: 20px }
 }
 
 .glow {
