@@ -14,6 +14,7 @@ h1 {
 h2 {
   font-family: "arial";
   text-align: center;
+  color: "white";
 }
 
 #drop {
@@ -36,14 +37,6 @@ h2 {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     top: 62.9%;
-  -webkit-animation: glow 2s infinite ease-in-out;
-  animation: glow 3s infinite ease-in-out;
-}
-
-@keyframes glow {
-   0% { -webkit-filter: brightness(100%); filter: brightness(100%); }
-   50% { -webkit-filter: brightness(175%); filter: brightness(175%); }
-   100% { -webkit-filter: brightness(100%); filter: brightness(100%); }
 }
 
 #cassette {
@@ -67,4 +60,54 @@ h2 {
 @media screen and (min-width: 1600px){
   #drop  { width : 40%; }
   #cassette { width : 10%; }
+}
+
+.glow {
+  -webkit-animation: glow 2s infinite ease-in-out;
+  animation: glow 2s infinite ease-in-out;
+}
+
+@keyframes glow {
+   0% { -webkit-filter: brightness(100%); filter: brightness(100%); }
+   50% { -webkit-filter: brightness(175%); filter: brightness(175%); }
+   100% { -webkit-filter: brightness(100%); filter: brightness(100%); }
+}
+
+.rainbow {
+  -webkit-animation: rainbow 1.5s infinite linear;
+  animation: rainbow 1.5s infinite linear;
+}
+
+@keyframes rainbow {
+  0% { -webkit-filter: hue-rotate(0deg); filter: hue-rotate(0deg); }
+  50% { -webkit-filter: hue-rotate(180deg); filter: hue-rotate(180deg); }
+  100% { -webkit-filter: hue-rotate(360deg); filter: hue-rotate(360deg); }
+}
+
+.bump {
+  -webkit-animation: bump 1s infinite ease-in-out;
+  animation: bump 1s infinite ease-in-out;
+}
+
+@keyframes bump {
+  0% {
+    -ms-transform: scale(1, 1); /* IE 9 */
+    -webkit-transform: scale(1, 1); /* Safari */
+    transform: scale(1, 1);
+  }
+  50% {
+    -ms-transform: scale(1.2, 1.2); /* IE 9 */
+    -webkit-transform: scale(1.2, 1.2); /* Safari */
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    -ms-transform: scale(1, 1); /* IE 9 */
+    -webkit-transform: scale(1, 1); /* Safari */
+    transform: scale(1, 1);
+  }
+}
+
+.party {
+  -webkit-animation: bump 1s infinite ease-in-out, rainbow 1.5s infinite linear;
+  animation: bump 1s infinite ease-in-out, rainbow 1.5s infinite linear;
 }
